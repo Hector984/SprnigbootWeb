@@ -3,9 +3,15 @@ package com.hector.curso.springboot.webapp.springboot_web.repositories;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Repository;
+
 import com.hector.curso.springboot.webapp.springboot_web.models.Product;
 
 // El repositorio es la capa de acceso a datos
+// Indica que este es el repositorio principal
+@Primary
+@Repository
 public class ProductRepositoryImpl implements ProductRepository {
 
     private List<Product> products;
